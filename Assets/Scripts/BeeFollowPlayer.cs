@@ -23,8 +23,10 @@ public class BeeFollowPlayer : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = GetDistanceToPlayer();
+        transform.LookAt(player.transform.position);
         if (distanceToPlayer >= barrierDistance)    //we are not to close
         {
+            
             transform.position += (transform.forward * movementSpeed * Time.deltaTime);
         }
     }
