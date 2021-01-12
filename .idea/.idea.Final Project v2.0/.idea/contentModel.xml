@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\MATERII\An3\SEM_1\VR\Laborator\TP\project\Final Project v2.0" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="lowPoly" t="Include">
+          <e p="LowPolyTreePack" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="FirstPerson.cs" t="Include" />
+          <e p="SceneLoader.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Final Project v2.0.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\popap\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\popap\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Final Project v2.0.-906937136.00" t="ExcludeRecursive" />
+    <e p="C:\Users\popap\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\popap\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+  </component>
+</project>
