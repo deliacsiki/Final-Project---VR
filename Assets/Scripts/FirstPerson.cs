@@ -16,9 +16,14 @@ public class FirstPerson : MonoBehaviour
     private float rotX;
 
     private bool disableCameraMovement;
-    
+
     //managing time
     private float startTime;
+
+    private Coroutine coroutine = null;
+    private Scene activeScene;
+
+    private List<GameObject> bees;
 
     void Start()
     {
@@ -26,7 +31,7 @@ public class FirstPerson : MonoBehaviour
         if (GetComponent<Rigidbody>())
             GetComponent<Rigidbody>().freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
-        
+
         canvasBtn = GameObject.Find("CanvasBtn");
         canvasCursor = GameObject.Find("CanvasCursor");
 
@@ -40,11 +45,26 @@ public class FirstPerson : MonoBehaviour
         {
             canvasBtn.SetActive(false);
         }
+
+        activeScene = SceneManager.GetActiveScene();
+        if (activeScene.name != "SecondScene" && activeScene.name != "FirstScene")
+        {
+            bees = new List<GameObject>();
+            GameObject bee = GameObject.Find("FantasyBee");
+            print("bee: " + bee);
+            if (bee)
+            {
+                bees.Add(bee);
+                foreach (GameObject beeItem in bees)
+                {
+                    beeItem.SetActive(false);
+                }
+            }
+        }
     }
 
     void Update()
     {
-
         checkObjectHit(); //for nextLevel btn
         if (!disableCameraMovement)
             MouseAiming();
@@ -68,41 +88,56 @@ public class FirstPerson : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-        
+
             var direction = transform.TransformDirection(Vector3.forward);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, direction, out hit, 3.5f))
+            if (Physics.Raycast(transform.position, direction, out hit, 4.5f))
             {
-                Debug.DrawLine(this.transform.position, hit.point, Color.red,5, false);           //make the ray cast visible in scene view
-    
+                Debug.DrawLine(this.transform.position, hit.point, Color.red, 5, false);           //make the ray cast visible in scene view
+
                 var colliderName = hit.collider.gameObject.name;
                 print(colliderName);
-                if (colliderName == "Bee House Variant")        //bee house hit
+                if (colliderName == "Bee House")        //bee house hit
                 {
-                    Scene activeScene = SceneManager.GetActiveScene();
                     if (activeScene.name == "FirstScene")
                     {
-                        Cursor.lockState = CursorLockMode.None;
-                        canvasBtn.SetActive(true);
-                        canvasCursor.SetActive(false);
-                        disableCameraMovement = true;
+                        coroutine = StartCoroutine(NextLevelCoroutine(0));
                     }
                     else
                     {
-                        startTime = Time.deltaTime;
+                        coroutine = StartCoroutine(NextLevelCoroutine(5));
+                        if (activeScene.name != "SecondScene")
+                        {
+                            foreach (GameObject bee in bees)
+                            {
+                                bee.SetActive(true);
+                            }
+                        }
                     }
-                }
-                else if (colliderName == "NextLevel")
-                {
-                    SceneManager.LoadScene("Scenes/SecondScene");
                 }
             }
         }
     }
 
+
+    IEnumerator NextLevelCoroutine(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Cursor.lockState = CursorLockMode.None;
+        canvasBtn.SetActive(true);
+        canvasCursor.SetActive(false);
+        disableCameraMovement = true;
+    }
+
     void KeyboardMovement()
     {
         Vector3 pos = transform.position;
+
+        if ((Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("d") || Input.GetKey("a")) && coroutine != null)
+        {
+            print("You have to stay put after touching the bee house");
+            StopCoroutine(coroutine);
+        }
 
         if (Input.GetKey("w"))
         {
