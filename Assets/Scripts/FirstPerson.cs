@@ -16,6 +16,9 @@ public class FirstPerson : MonoBehaviour
     private float rotX;
 
     private bool disableCameraMovement;
+    
+    //managing time
+    private float startTime;
 
     void Start()
     {
@@ -23,10 +26,20 @@ public class FirstPerson : MonoBehaviour
         if (GetComponent<Rigidbody>())
             GetComponent<Rigidbody>().freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
+        
+        canvasBtn = GameObject.Find("CanvasBtn");
+        canvasCursor = GameObject.Find("CanvasCursor");
 
         disableCameraMovement = false;
-        canvasCursor.SetActive(true);
-        canvasBtn.SetActive(false);
+        if (canvasCursor)
+        {
+            canvasCursor.SetActive(true);
+        }
+
+        if (canvasBtn)
+        {
+            canvasBtn.SetActive(false);
+        }
     }
 
     void Update()
@@ -58,18 +71,26 @@ public class FirstPerson : MonoBehaviour
         
             var direction = transform.TransformDirection(Vector3.forward);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, direction, out hit, 1000))
+            if (Physics.Raycast(transform.position, direction, out hit, 3.5f))
             {
                 Debug.DrawLine(this.transform.position, hit.point, Color.red,5, false);           //make the ray cast visible in scene view
-
+    
                 var colliderName = hit.collider.gameObject.name;
                 print(colliderName);
-                if (colliderName == "Bee House")
+                if (colliderName == "Bee House Variant")        //bee house hit
                 {
-                    Cursor.lockState = CursorLockMode.None;
-                    canvasBtn.SetActive(true);
-                    canvasCursor.SetActive(false);
-                    disableCameraMovement = true;
+                    Scene activeScene = SceneManager.GetActiveScene();
+                    if (activeScene.name == "FirstScene")
+                    {
+                        Cursor.lockState = CursorLockMode.None;
+                        canvasBtn.SetActive(true);
+                        canvasCursor.SetActive(false);
+                        disableCameraMovement = true;
+                    }
+                    else
+                    {
+                        startTime = Time.deltaTime;
+                    }
                 }
                 else if (colliderName == "NextLevel")
                 {
