@@ -6,8 +6,9 @@ public class BeeFollowPlayer : MonoBehaviour
 {
     private bool activated = false;
     private float barrierDistance = 5.0f;
-    private float movementSpeed = 5.0f;
+    private float movementSpeed = 2.0f;
     private GameObject player = null;
+    private Animator anim;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class BeeFollowPlayer : MonoBehaviour
         {
             print("Player not found");
         }
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,8 +29,14 @@ public class BeeFollowPlayer : MonoBehaviour
         transform.LookAt(player.transform.position);
         if (distanceToPlayer >= barrierDistance)    //we are not to close
         {
-            
+            //move
+            anim.Play("Move");
             transform.position += (transform.forward * movementSpeed * Time.deltaTime);
+        }
+        else
+        {
+            //not moving
+            anim.Play("Idle");
         }
     }
 
