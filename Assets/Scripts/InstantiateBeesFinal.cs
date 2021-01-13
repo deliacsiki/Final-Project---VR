@@ -43,11 +43,14 @@ public class InstantiateBeesFinal : MonoBehaviour
                     for (int i = 0; i < noBees - 10; i++) //for every bee
                     {
                         //position of bee with respect to the SampleBee
-                        Vector3 posRight = positionPlayer + new Vector3(spaceRow / 2, 0f, depth);
-                        Vector3 posLeft = positionPlayer + new Vector3(-spaceRow / 2, 0f, depth);
+                        Vector3 posRight = positionPlayer + new Vector3(spaceRow / 2, positionBeeSample.y - positionPlayer.y, depth);
+                        Vector3 posLeft = positionPlayer + new Vector3(-spaceRow / 2, positionBeeSample.y - positionPlayer.y, depth);
                         //generate bees
                         GameObject beeRight = Instantiate(beeSample, posRight, Quaternion.Euler(0, 270, 0));
-                        GameObject bee2Left = Instantiate(beeSample, posLeft, Quaternion.Euler(0, 90, 0));
+                        GameObject beeLeft = Instantiate(beeSample, posLeft, Quaternion.Euler(0, 90, 0));
+                        //make bees stay still
+                        beeRight.AddComponent(typeof(BeeStayStill));
+                        beeLeft.AddComponent(typeof(BeeStayStill));
                         //increase space between bees
                         depth += 2.0f;
                     }

@@ -4,21 +4,8 @@
     <list default="true" id="21590dd8-53d1-41fd-bb43-332631186d69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/Bee House Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/Bee House Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/FantasyBee Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/FantasyBee Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BasicLevel/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SecondScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ThirdScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +26,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InstantiateBees.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BeeStayStill.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610462713028</updated>
       <workItem from="1610462734863" duration="3503000" />
-      <workItem from="1610538312072" duration="6939000" />
+      <workItem from="1610538312072" duration="9227000" />
     </task>
     <servers />
   </component>

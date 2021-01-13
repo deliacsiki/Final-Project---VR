@@ -11,6 +11,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="BeeFollowPlayer.cs" t="Include" />
+          <e p="BeeStayStill.cs" t="Include" />
           <e p="FirstPerson.cs" t="Include" />
           <e p="InstantiateBees.cs" t="Include" />
           <e p="InstantiateBeesFinal.cs" t="Include" />
