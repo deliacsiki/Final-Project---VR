@@ -70,6 +70,9 @@ public class InstantiateBees : MonoBehaviour
                     {
                         beeLeft.AddComponent(typeof(BeeFollowPlayer));
                         beeRight.AddComponent(typeof(BeeFollowPlayer));
+                        
+                        beeLeft.AddComponent(typeof(BeeStayStill));
+                        beeRight.AddComponent(typeof(BeeStayStill));
                     }
                     //increase space between bees
                     space += 5.0f;
@@ -79,6 +82,8 @@ public class InstantiateBees : MonoBehaviour
                 {
                     beeSample.SetActive(true);
                     beeSample.AddComponent(typeof(BeeFollowPlayer));
+                    
+                    beeSample.AddComponent(typeof(BeeStayStill));
                 }
             }
         }

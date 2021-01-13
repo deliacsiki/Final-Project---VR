@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21590dd8-53d1-41fd-bb43-332631186d69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/BasicLevel/FantasyBee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BasicLevel/FantasyBee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstantiateBees.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstantiateBees.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,7 @@
       <updated>1610462713028</updated>
       <workItem from="1610462734863" duration="3503000" />
       <workItem from="1610538312072" duration="9389000" />
-      <workItem from="1610556993863" duration="2415000" />
+      <workItem from="1610556993863" duration="2873000" />
     </task>
     <servers />
   </component>
