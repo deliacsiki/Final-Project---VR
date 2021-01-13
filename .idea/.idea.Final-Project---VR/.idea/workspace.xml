@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21590dd8-53d1-41fd-bb43-332631186d69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Final-Project---VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene7.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BeeFollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstPerson.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InstantiateBees.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BeeStayStill.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InstantiateBeesFinal.cs" />
       </list>
     </option>
   </component>
@@ -76,7 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610462713028</updated>
       <workItem from="1610462734863" duration="3503000" />
-      <workItem from="1610538312072" duration="9227000" />
+      <workItem from="1610538312072" duration="9389000" />
+      <workItem from="1610556993863" duration="1694000" />
     </task>
     <servers />
   </component>
