@@ -46,21 +46,21 @@ public class FirstPerson : MonoBehaviour
             canvasBtn.SetActive(false);
         }
 
-        activeScene = SceneManager.GetActiveScene();
-        if (activeScene.name != "SecondScene" && activeScene.name != "FirstScene")
-        {
-            bees = new List<GameObject>();
-            GameObject bee = GameObject.Find("FantasyBee");
-            print("bee: " + bee);
-            if (bee)
-            {
-                bees.Add(bee);
-                foreach (GameObject beeItem in bees)
-                {
-                    beeItem.SetActive(false);
-                }
-            }
-        }
+        // activeScene = SceneManager.GetActiveScene();
+        // if (activeScene.name != "SecondScene" && activeScene.name != "FirstScene")
+        // {
+        //     bees = new List<GameObject>();
+        //     GameObject bee = GameObject.Find("FantasyBee");
+        //     print("bee: " + bee);
+        //     if (bee)
+        //     {
+        //         bees.Add(bee);
+        //         foreach (GameObject beeItem in bees)
+        //         {
+        //             beeItem.SetActive(false);
+        //         }
+        //     }
+        // }
     }
 
     void Update()
@@ -99,20 +99,20 @@ public class FirstPerson : MonoBehaviour
                 print(colliderName);
                 if (colliderName == "Bee House")        //bee house hit
                 {
-                    if (activeScene.name == "FirstScene")
+                    if (activeScene.name == "Scene1")
                     {
                         coroutine = StartCoroutine(NextLevelCoroutine(0));
                     }
                     else
                     {
                         coroutine = StartCoroutine(NextLevelCoroutine(5));
-                        if (activeScene.name != "SecondScene")
-                        {
-                            foreach (GameObject bee in bees)
-                            {
-                                bee.SetActive(true);
-                            }
-                        }
+                        // if (activeScene.name != "Scene2")
+                        // {
+                        //     foreach (GameObject bee in bees)
+                        //     {
+                        //         bee.SetActive(true);
+                        //     }
+                        // }
                     }
                 }
             }
