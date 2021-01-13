@@ -619,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 4163455834393545963, guid: 2496b1417d3eaff478eea8e7576a0d50,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scenes/Scene1
+      value: Scenes/Scene7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2496b1417d3eaff478eea8e7576a0d50, type: 3}

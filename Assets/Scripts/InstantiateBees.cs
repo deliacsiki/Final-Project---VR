@@ -47,7 +47,7 @@ public class InstantiateBees : MonoBehaviour
                         isActive = true;
                         break;
                     case "Scene6":
-                        noBees = 5;
+                        noBees = 4;
                         isActive = true;
                         break;
                     default:
@@ -60,13 +60,16 @@ public class InstantiateBees : MonoBehaviour
                 for (int i = 0; i < noBees; i++)    //for every bee
                 {
                     //position of bee with respect to the SampleBee
-                    Vector3 pos = positionBeeSample + new Vector3(-space, 0f, 0f);
+                    Vector3 posRight = positionBeeSample + new Vector3(-space, 0f, 0f);
+                    Vector3 posLeft = positionBeeSample + new Vector3(space, 0f, 0f);
                     //generate bees
-                    GameObject bee = Instantiate(beeSample, pos, Quaternion.Euler(0, -180, 0));
+                    GameObject beeLeft = Instantiate(beeSample, posLeft, Quaternion.Euler(0, -180, 0));
+                    GameObject beeRight = Instantiate(beeSample, posRight, Quaternion.Euler(0, -180, 0));
                     //add script to bee
                     if (isActive)
                     {
-                        bee.AddComponent(typeof(BeeFollowPlayer));
+                        beeLeft.AddComponent(typeof(BeeFollowPlayer));
+                        beeRight.AddComponent(typeof(BeeFollowPlayer));
                     }
                     //increase space between bees
                     space += 5.0f;

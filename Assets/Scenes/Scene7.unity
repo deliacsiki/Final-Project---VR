@@ -842,6 +842,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4163455834393545961, guid: 2496b1417d3eaff478eea8e7576a0d50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4163455834393545963, guid: 2496b1417d3eaff478eea8e7576a0d50,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -856,6 +861,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Scenes/Scene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163455834829823759, guid: 2496b1417d3eaff478eea8e7576a0d50,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Congrats!
+
+        If you made it this far it means you are no longer
+        afraid of bees!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2496b1417d3eaff478eea8e7576a0d50, type: 3}
