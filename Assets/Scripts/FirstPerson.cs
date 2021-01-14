@@ -24,12 +24,18 @@ public class FirstPerson : MonoBehaviour
     private Scene activeScene;
 
     private List<GameObject> bees;
+    
+    private Rigidbody rb;
 
     void Start()
     {
         //rigid body should not change rotation
         if (GetComponent<Rigidbody>())
-            GetComponent<Rigidbody>().freezeRotation = true;
+        {
+            rb = GetComponent<Rigidbody>();
+            rb.freezeRotation = true;
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
 
         canvasBtn = GameObject.Find("CanvasBtn");
@@ -157,5 +163,11 @@ public class FirstPerson : MonoBehaviour
         }
 
         transform.position = new Vector3(pos.x, 3, pos.z);
+    }
+    
+    private void OnCollisionStay(Collision other)
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 }
